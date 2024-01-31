@@ -22,8 +22,7 @@ public class MenstrualCycleTracker {
         this.cycleLength = cycleLength;
     }
     public void setLastPeriodDate(String year, String month, String day) {
-        LocalDate lastPeriodDate = LocalDate.parse(fetchDate(year,month,day));
-        this.lastPeriodDate = lastPeriodDate;
+        this.lastPeriodDate = LocalDate.parse(fetchDate(year,month,day));
     }
     private String fetchDate(String year, String month, String day) {
         return year + "-" + month + "-" + day;

@@ -46,7 +46,7 @@ class MenstrualCycleTrackerTest {
         MenstrualCycleTracker cycleTracker = new MenstrualCycleTracker();
         cycleTracker.setLastPeriodDate("2024", "01","05");
         String lastPeriod = String.valueOf(cycleTracker.getLastPeriodDate());
-        assertEquals("2024-01-05",lastPeriod);
+        assertEquals("2024-01-05", lastPeriod);
         String lastDate = String.valueOf(cycleTracker.getNextPeriodDate(23));
         assertEquals("2024-01-28", lastDate);
     }
