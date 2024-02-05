@@ -38,6 +38,7 @@ public class MainApp {
     private static void searchPhoneNumber() {
         System.out.print("Enter first name: ");
         String firstName = input.nextLine();
+
         PhoneBook myPhoneBook = new PhoneBook();
         String name = String.valueOf(myPhoneBook.searchPhoneNumber(firstName));
         System.out.println(name);
@@ -57,13 +58,13 @@ public class MainApp {
         String phoneNumber = input.nextLine();
 
 
-        PhoneBook user = new PhoneBook();
-        PhoneBook contact = new PhoneBook(firstName,lastName,phoneNumber);
+        PhoneBook phoneBook = new PhoneBook();
+//        PhoneBook contact = new PhoneBook(firstName,lastName,phoneNumber);
 
 
-        user.addPhoneNumber(firstName,lastName,phoneNumber);
+        phoneBook.addPhoneNumber(firstName,lastName,phoneNumber);
         System.out.println("Saved \n");
-        System.out.println(contact);
+//        System.out.println(contact);
         mainMenu();
 
 

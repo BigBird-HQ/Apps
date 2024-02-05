@@ -9,7 +9,7 @@ class PhoneBookTest {
     PhoneBook myPhoneBook;
     @BeforeEach
         public void testThisFirst() {
-        myPhoneBook = new PhoneBook("Meshack", "Yaro", "08179491049");
+//        myPhoneBook = new PhoneBook("Meshack", "Yaro", "08179491049");
 
     }
 
