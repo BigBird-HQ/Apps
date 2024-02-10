@@ -14,7 +14,7 @@ public class TelevisionTest {
     }
 
     @Test
-    public void testThatTelevisionCanBeTurnedOn() {
+    public void televisionCanBeTurnedOn_turnTVOnTest() {
         assertFalse(myTV.isOn());
         myTV.toggle();
         assertTrue(myTV.isOn());
@@ -22,7 +22,7 @@ public class TelevisionTest {
     }
 
     @Test
-    public void testThatTelevisionCanBeTurnedOff() {
+    public void televisionCanBeTurnedOff_turnTVOffTest() {
         myTV.toggle();
         assertTrue(myTV.isOn());
         myTV.toggle();
@@ -39,7 +39,7 @@ public class TelevisionTest {
     }
 
     @Test
-    public void increaseVolume_VolumeCannotIncreaseBeyond100Test() {
+    public void increaseVolumeBeyond100_volumeCannotIncreaseBeyond100Test() {
         myTV.toggle();
         for (int count = 1; count < 121; count++) {
             myTV.increaseVolume();
@@ -55,14 +55,14 @@ public class TelevisionTest {
         assertEquals(0, myTV.getVolume());
     }
 
-//    @Test
-//    public void decreaseVolume_CannotDecreaseBelowZeroTest() {
-//        myTV.toggle();
-//        for (int volume = 100; volume > 0; volume--) {
-//            myTV.decreaseVolume();
-//        }
-//        assertEquals(0, myTV.getVolume());
-//    }
+    @Test
+    public void decreaseVolumeBelowZero_volumeCannotGoBelowZeroTest() {
+        myTV.toggle();
+        for (int volume = 100; volume > 0; volume--) {
+            myTV.decreaseVolume();
+        }
+        assertEquals(0, myTV.getVolume());
+    }
 
     @Test
     public void changeChannel_changeUpwardTest() {

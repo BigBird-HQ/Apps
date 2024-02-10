@@ -25,10 +25,10 @@ public class Television {
     }
 
     public void decreaseVolume() {
-//        if (volume > 0 && volume > 100) {
-//            volume--;
-//        }
-        volume--;
+
+        if (volume > 0 && volume <= 100) volume--;
+
+
     }
 
     public void changeChannelUp() {
